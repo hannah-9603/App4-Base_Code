@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to 
+The goal of this code is to design another app that distinguishes the diagnosis between two similar disorders based on what symptoms are shown. 
  
 Known Issues:
 blah, blah, blah, blah
@@ -37,13 +37,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+//This is where I put Java to define variables and functions. 
+	var ibs_count = 0; //a variable that counts answers correlating to irritable bowel syndrome
+        var ibd_count = 0; //a variable that counts answers correlating to inflammatory bowel disease
 
-	//YOUR JAVASCRIPT GOES HERE
+        function ibsAdd(){
+       		ibs_count = ibs_count + 1;
+		alert(ibs_count);
+
+        }
+		//function that calculates the number of answers correlating to irritable bowel syndrome
+
+        function ibdAdd(){
+        	ibd_count = ibd_count + 1;
+	
+        }
+		//function that calculates the number of answers correlating to inflammatory bowel disease 
+	
+	function resultsPercent ()
+	{
+		var ibsPercent = (ibs_count/4)*100; //I defined a new variable to calculate the irritable bowel syndrome percent.	
+		var ibdPercent = (ibd_count/4)*100; //I defined a new variable to calculate the inflammatory bowel disease percent.	
+		var resultText = document.getElementById("results"); 
+		resultText.innerHTML = "Probability it is Irritable Bowel Syndrome =" + ibsPercent + "%" + "<br> Probability it Inflammatory Bowel Disease =" + ibdPercent + "%"; 
+		//This code gets the results posted on the same page as the results. 
+	
+	}
+		//function that calculates and outputs the probability that the symptoms are of irritable bowel syndrome or a inflammatory bowel disease
 
 </script>	
 
 
-<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
+<!-- THIS STYLE CODE HELPS MAKE THE APP LOOK GOOD. DONT MESS WITH IT -->
 <style>	
 .body {
      margin: 0em;
