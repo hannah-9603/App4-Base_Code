@@ -92,9 +92,98 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+<!-- Below, I added the different pages and questions about symptoms that the user can click on. -->	
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Cold or Allergies?</h1>
+	</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	
+	<div id="content" class="w3-container">
+		<p>Are you feeling like you might have irritable bowel syndrome but wonder if it is inflammatory bowel disease. Answer a few short questions to find out!</p>
+	
+		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	</div>
+	
+
+	<div class="page" id="one">
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Question 1</h1>
+		</div>
+	
+    		<div id="content" class="w3-container">
+        		<p>Do you feel that your abdomen or stomach is bloated?</p> 
+			<!-- I edited the question here.  -->
+			<a href="#two" onclick="ibsAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="#two" onclick="ibdAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page one, and clicking either "yes" or "no" button takes you to page two.  -->
+			<!-- I created the "yes" and "no" buttons here.  -->
+
+		
+    		</div>
+	</div>
+
+	<div class="page" id="two">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 2</h1>
+		</div>
+	
+		<div id="content" class="w3-container">
+			<p>Have you been experiencing weight loss?</p>
+		<a href="#three" onclick="ibdAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#three" onclick="ibsAdd();" class="w3-btn w3-black"> No </a>
+		<!-- This is page two, and clicking either "yes" or "no" button takes you to page three.  -->
+
+		
+		</div>
+	</div>
+
+
+	<div class="page" id="three">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 3</h1>
+		</div>
+	
+		<div id="content" class="w3-container">
+			<p>Do you have a fever?</p>
+			<a href="#four" onclick="ibdAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="#four" onclick="ibsAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page three, and clicking either "yes" or "no" button takes you to page four.  -->
+		</div>
+	</div>
+	<!-- I created a new division to test question 3.  -->
+	
+	<div class="page" id="four">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 4</h1>
+		</div>
+	
+		<div id="content" class="w3-container">
+			<p>Are you experiencing any nausea or headaches?</p>
+			<a href="#five" onclick="ibsAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="#five" onclick="ibdAdd();" class="w3-btn w3-black"> No </a>
+			<!-- This is page four, and clicking either "yes" or "no" button takes you to the results page.  -->
+		</div>
+	</div>
+	<!-- I created a new division to test question 4.  -->
+	<!-- I added the ibsAdd and ibdAdd functions for the other 3 questions.  -->
+
+	<div class="page" id="five">
+		<div class="w3-container w3-flat-carrot">
+			<h2>Results</h2>
+		</div>
+
+		<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a href="#five" onclick="resultsPercent();" class="w3-btn w3-black"> Click for results! </a>
+		<!-- I created the button for the results button here. -->	
+		<!-- This is the last page, and clicking "Click for results" button ouputs the two probabilities for having either irritable bowel syndrome or inflammatory bowel disease. -->
+		
+		</div>
+	</div>	
 	
 </body>
 </html>
